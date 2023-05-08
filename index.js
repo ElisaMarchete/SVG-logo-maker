@@ -26,3 +26,4 @@ function getInput() {
 }
 
 // Function call to initialize app
+getInput();
