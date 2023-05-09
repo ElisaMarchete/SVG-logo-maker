@@ -1,7 +1,7 @@
 // loading thitd party modules
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateSVG = require("./lib/generateSVG");
+const Circle = require("./lib/shapes.js");
 
 // Function to ask user questions and generate readme.md file
 function getInput() {
@@ -40,11 +40,16 @@ function getInput() {
     .then((answers) => {
       console.log(answers);
 
-      // generateMarkdown function call with user answers as argument -> function from module generateMarkdown.js
-      const svgFile = generateSVG(answers);
+      let circle = new Circle(
+        answers.text,
+        answers.textColor,
+        answers.shape,
+        answers.shapeColor
+      );
+      const result = circle.printCircle();
 
       // WriteFile function to create readme.md file
-      fs.writeFile("examples/logo.svg", svgFile, (err) =>
+      fs.writeFile("examples/logo.svg", result, (err) =>
         err ? console.log(err) : console.log("Successfully created logo!")
       );
     });
