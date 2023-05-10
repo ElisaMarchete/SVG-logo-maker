@@ -1,7 +1,7 @@
 // loading thitd party modules
 const inquirer = require("inquirer");
-const fs = require("fs");
 const Shapes = require("./lib/shapes.js");
+const generateFile = require("./lib/generateFile.js");
 
 // Function to ask user questions and generate readme.md file
 function getInput() {
@@ -10,19 +10,18 @@ function getInput() {
       {
         type: "input",
         name: "text",
-        message: "Enter up to three characters",
+        message: "Enter up to three characters:",
         validate: function (input) {
           if (input.length <= 3) {
             return true;
           }
-          return "Please enter up to three characters.";
+          return "Please enter up to three characters:";
         },
       },
       {
         type: "input",
         name: "textColor",
-        message:
-          "Select the text's color: Please enter a color keyword OR a hexadecimal number",
+        message: "Choose text color: Color keyword or hex code:",
       },
       {
         type: "list",
@@ -33,25 +32,12 @@ function getInput() {
       {
         type: "input",
         name: "shapeColor",
-        message:
-          "Select the shape's color: Please enter a color keyword OR a hexadecimal number",
+        message: "Choose Shape color: Color keyword or hex code:",
       },
     ])
     .then((answers) => {
-      console.log(answers);
-
-      let circle = new Shapes.Circle(
-        answers.text,
-        answers.textColor,
-        answers.shape,
-        answers.shapeColor
-      );
-      const result = circle.render();
-
-      // WriteFile function to create readme.md file
-      fs.writeFile("examples/logo.svg", result, (err) =>
-        err ? console.log(err) : console.log("Successfully created logo!")
-      );
+      // console.log(answers);
+      generateFile(answers);
     });
 }
 
