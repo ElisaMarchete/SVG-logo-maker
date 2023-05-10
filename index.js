@@ -1,7 +1,7 @@
 // loading thitd party modules
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Circle = require("./lib/shapes.js");
+const Shapes = require("./lib/shapes.js");
 
 // Function to ask user questions and generate readme.md file
 function getInput() {
@@ -40,13 +40,13 @@ function getInput() {
     .then((answers) => {
       console.log(answers);
 
-      let circle = new Circle(
+      let circle = new Shapes.Circle(
         answers.text,
         answers.textColor,
         answers.shape,
         answers.shapeColor
       );
-      const result = circle.printCircle();
+      const result = circle.render();
 
       // WriteFile function to create readme.md file
       fs.writeFile("examples/logo.svg", result, (err) =>
