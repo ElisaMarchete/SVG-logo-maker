@@ -27,7 +27,7 @@ If you have any questions or need further assistance, please feel free to reach 
 Happy logo making!
 
 ## Screenshot of a logo.svg sample generated using the application
-![Screenshot of the application](./assets/screenshot/Capture.PNG)
+![Screenshot of the application](./assets/screenshot/xxxxx.PNG)
 
 ## Link to walkthrough video 
-[Link walkthrough video Screencastify Google Drive](https://watch.screencastify.com/v/zAMxJKDXt1KeInCHeQha)  
+[Link walkthrough video Screencastify Google Drive](https://watch.scxxxxxxxxxxxxxxxxxxxxxxxa)  
