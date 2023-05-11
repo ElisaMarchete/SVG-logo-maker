@@ -1,5 +1,5 @@
-# SVG Logo Maker
-This is a simple SVG Logo Maker application built using Node.js. With this application, you can generate a logo consisting of up to three characters, choosing the text color, shape, and the color.
+# Logo Maker
+This is a simple SVG Logo Maker application built using Node.js. With this application, you can generate a logo consisting of up to three characters, choosing the text, shape, and the colors.
 
 ## Installation
 1. Clone this repository
@@ -22,8 +22,6 @@ This application was developed using Node.js and various open-source libraries. 
 * SVG.js: https://svgjs.com
 * Inquirer.js: https://github.com/SBoudrias/Inquirer.js
 * color-name: https://github.com/colorjs/color-name
-
-If you have any questions or need further assistance, please feel free to reach out.
 
 Happy logo making!
 
