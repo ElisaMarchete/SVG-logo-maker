@@ -1,9 +1,9 @@
-// loading thitd party modules
+// loading modules
 const inquirer = require("inquirer");
 const generateFile = require("./lib/generateFile.js");
 const validation = require("./lib/validation.js");
 
-// Function to ask user questions and generate readme.md file
+// Function to ask user questions
 function getInput() {
   inquirer
     .prompt([
