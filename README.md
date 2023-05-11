@@ -21,13 +21,14 @@ This application was developed using Node.js and various open-source libraries. 
 * Node.js: https://nodejs.org
 * SVG.js: https://svgjs.com
 * Inquirer.js: https://github.com/SBoudrias/Inquirer.js
+* color-name: https://github.com/colorjs/color-name
 
 If you have any questions or need further assistance, please feel free to reach out.
 
 Happy logo making!
 
-## Screenshot of a logo.svg sample generated using the application
-![Screenshot of the application](./assets/screenshot/xxxxx.PNG)
-
 ## Link to walkthrough video 
-[Link walkthrough video Screencastify Google Drive](https://watch.scxxxxxxxxxxxxxxxxxxxxxxxa)  
+[Link walkthrough video](https://watch.screencastify.com/v/EVAFO2Z26jDI2CYrqNfA)  
+
+## Screenshot of a logo.svg sample generated using the application
+![Screenshot of the application](./screenshot/Capture.PNG)
