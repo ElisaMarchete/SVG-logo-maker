@@ -1,7 +1,7 @@
 // loading thitd party modules
 const inquirer = require("inquirer");
-const Shapes = require("./lib/shapes.js");
 const generateFile = require("./lib/generateFile.js");
+const validation = require("./lib/validation.js");
 
 // Function to ask user questions and generate readme.md file
 function getInput() {
@@ -11,17 +11,13 @@ function getInput() {
         type: "input",
         name: "text",
         message: "Enter up to three characters:",
-        validate: function (input) {
-          if (input.length <= 3) {
-            return true;
-          }
-          return "Please enter up to three characters:";
-        },
+        validate: validation.validateTextLength,
       },
       {
         type: "input",
         name: "textColor",
         message: "Choose text color: Color keyword or hex code:",
+        validate: validation.validateColor,
       },
       {
         type: "list",
@@ -33,6 +29,7 @@ function getInput() {
         type: "input",
         name: "shapeColor",
         message: "Choose Shape color: Color keyword or hex code:",
+        validate: validation.validateColor,
       },
     ])
     .then((answers) => {
